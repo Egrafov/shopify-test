@@ -1,23 +1,49 @@
-{%
-  render 'product-metafields', {
-  product_width_label: settings.product_width_label,
-  fuel_type_label: settings.fuel_type_label,
-  btu_label: settings.btu_label,
-  warranty_label: settings.warranty_label,
-  viewing_height_label: settings.viewing_height_label,
-  viewing_width_label: settings.viewing_width_label,
-  product_height_label: settings.product_height_label,
-  product_depth_label: settings.product_depth_label,
-  manuals_label: settings.manuals_label,
-  parent_collection_label: settings.parent_collection_label,
-  parent_category_label: settings.parent_category_label,
-  product_features_label: settings.product_features_label
-  }
-%}
+<section class="product-metafields">
+  <div class="product-attributes">
+    <ul>
+      <li>
+        <strong>{{ settings.product_width_label }}</strong>: {{ product.metafields.nhc_specs.product_width }}
+      </li>
+      <li>
+        <strong>{{ settings.fuel_type_label }}</strong>: {{ product.metafields.nhc_specs.fuel_type }}
+      </li>
+      <li>
+        <strong>{{ settings.btu_label }}</strong>: {{ product.metafields.nhc_specs.btu }}
+      </li>
+      <li>
+        <strong>{{ settings.warranty_label }}</strong>: {{ product.metafields.nhc_specs.warranty }}
+      </li>
+      <li>
+        <strong>{{ settings.viewing_height_label }}</strong>: {{ product.metafields.nhc_specs.viewing_height }}
+      </li>
+      <li>
+        <strong>{{ settings.viewing_width_label }}</strong>: {{ product.metafields.nhc_specs.viewing_width }}
+      </li>
+      <li>
+        <strong>{{ settings.product_height_label }}</strong>: {{ product.metafields.nhc_specs.product_height }}
+      </li>
+      <li>
+        <strong>{{ settings.product_depth_label }}</strong>: {{ product.metafields.nhc_specs.product_depth }}
+      </li>
+      <li>
+        <strong>{{ settings.manuals_label }}</strong>: {{ product.metafields.nhc_specs.manuals }}
+      </li>
+      <li>
+        <strong>{{ settings.parent_collection_label }}</strong>: {{ product.metafields.nhc.parent_collection }}
+      </li>
+      <li>
+        <strong>{{ settings.parent_category_label }}</strong>: {{ product.metafields.nhc.parent_category }}
+      </li>
+      <li>
+        <strong>{{ settings.product_features_label }}</strong>: {{ product.metafields.nhc.product_features }}
+      </li>
+    </ul>
+  </div>
+</section>
 
 {% schema %}
 {
-  "name": "Product MetaSection",
+  "name": "Product Metafields",
   "settings": [
     {
       "type": "text",
