@@ -669,7 +669,7 @@
         </section>
       </div>
     </div>
-    {% section 'product-metafields' %}
+
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
@@ -723,6 +723,8 @@
     </script>
   </div>
 </product-info>
+
+{% section 'product-metafields' %}
 
 {% schema %}
 {
