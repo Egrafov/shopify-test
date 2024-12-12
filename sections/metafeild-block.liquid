@@ -1,6 +1,44 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{
+  "name": "Product Block Section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "product_attributes",
+      "name": "Product Attributes",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Attribute Name"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "Value here"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "product_attributes",
+        "settings": {
+          "label": "Weight",
+          "value": "50kg"
+        }
+      },
+      {
+        "type": "product_attributes",
+        "settings": {
+          "label": "Height",
+          "value": "120cm"
+        }
+      }
+    ]
   }
+}
 {% endschema %}
