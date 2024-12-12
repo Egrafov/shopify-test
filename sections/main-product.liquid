@@ -667,10 +667,9 @@
             {{- 'icon-arrow.svg' | inline_asset_content -}}
           </a>
         </section>
-        {% section 'product-metafields' %}
       </div>
     </div>
-
+    {% section 'product-metafields' %}
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
